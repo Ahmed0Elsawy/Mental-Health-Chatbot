@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Automations</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <div class="logo">MindAid</div>
+    <div class="nav-links">
+      <a href="#services">Technology</a>
+      <a href="#process">Process</a>
+      <a href="#team">Team</a>
+    </div>
+    <a href="#getstarted">
+    <button class="get-started">Get Started</button>
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Mental Health Chatbot<br> Designed To Support University Students</h1>
+      <div class="team-photos">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Team member 1" class="team-photo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Team member 2" class="team-photo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Team member 3" class="team-photo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Team member 4" class="team-photo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Team member 5" class="team-photo">
+      </div>
+      <button class="talk-button">Let's talk</button>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services">
+  <header>
+    <h1>Technology</h1>
+  </header>
+
+  <div class="services">
+    <div class="service">
+      <h2> Core AI and NLP</h2>
+      <ul>
+        <li>Use Hugging Face Transformers (like GPT or Llama) for natural language understanding and empathetic conversations.</li>
+        <li>Integrate pre-trained sentiment analysis models to detect emotions and adjust responses accordingly</li>
+      </ul>
+      <a href="#">Discover more</a>
+    </div>
+    <div class="service">
+      <h2>Development Tools</h2>
+      <ul>
+        <li>Backend: Use Python frameworks like Flask or FastAPI for handling chatbot logic and API calls.</li>
+        <li>Frontend: Use Streamlit for a simple web interface or embed the chatbot on platforms like WhatsApp using their API.</li>
+      </ul>
+      <a href="#">Discover more</a>
+    </div>
+        <div class="service">
+      <h2>Hosting and Security</h2>
+      <ul>
+        <li>Deploy the chatbot on Google Cloud or Heroku for easy scalability. Ensure user data privacy with HTTPS encryption and secure database storage (e.g., PostgreSQL).</li>
+      </ul>
+      <a href="#">Discover more</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Process Section -->
+  <section id="process">
+    <header>
+      <h1>Our Process</h1>
+    </header>
+
+    <div class="process-grid">
+      <div class="step">
+        <h2>Step 1: Datasets</h2>
+        <p>Mental Health in Social Media: Data from tweets, forums, and mental health-related posts. Reddit data via Pushshift API for subreddits like r/mentalhealth or r/depression. Cornell Movie Dialogues Corpus: For conversational training.</p>
+      </div>
+      <div class="step">
+        <h2>Step 2: Tools and Libraries</h2>
+        <p>Hugging Face Transformers: Pretrained conversational AI models like GPT or Llama. FastAPI or Flask: Lightweight backend frameworks for chatbot logic. Deployment: Use Streamlit Cloud or Heroku for free, scalable hosting.</p>
+      </div>
+      <div class="step">
+        <h2>Step 3: Learning Resources</h2>
+        <p>Hugging Face Tutorials: Step-by-step AI chatbot development. Mental health guidelines: Mind.org.uk and WHO Mental Health Resources. Courses: Coursera NLP Specialization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+  <h2>Meet Our Team</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="John Doe">
+      <h3>Hanaa Salem</h3>
+      <p>Lead Data Scientist</p>
+    </div>
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Jane Smith">
+      <h3>Ahmed Ayman</h3>
+      <p>AI Engineer</p>
+    </div>
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Sam Johnson">
+      <h3>Mostafa Taha</h3>
+      <p>Product Manager</p>
+    </div>
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Emily Davis">
+      <h3>Samer Zaid</h3>
+      <p>UX Designer</p>
+    </div>
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Michael Lee">
+      <h3>Abdullah Srour</h3>
+      <p>Software Developer</p>
+    </div>
+  </div>
+</section>
+
+  <section id="getstarted" style="padding: 60px 30px; text-align: center;">
+  <h2>Join Us Today</h2>
+  <p>Access exclusive content and personalized support by logging in or signing up.</p>
+  <button onclick="window.location.href='login'" style="background-color: #000; color: #fff; padding: 10px 20px; margin: 10px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">Log In</button>
+  <button onclick="window.location.href='signup'" style="background-color: #000; color: #fff; padding: 10px 20px; margin: 10px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">Sign Up</button>
+</section>
+
+
+  <!-- Contact Section -->
+<footer class="contact-section">
+  <div class="contact-card">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to get started with your AI solution? Reach out today!</p>
+    <button>Contact Us</button>
+    <a href="mailto:info@ai-automations.com">info@ai-automations.com</a>
+  </div>
+</footer>
+<!-- Footer Section -->
+<footer class="footer-section">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>MindAid</h3>
+      <p>MindAid</p>
+    </div>
+    <div class="footer-right">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:bohdan@bosar.agency">Ahmed</a></p>
+      <p>Email: <a href="mailto:bohdan@bosar.agency">Mostfa</a></p>
+      <p>Email: <a href="mailto:bohdan@bosar.agency">Samer</a></p>
+      <p>Email: <a href="mailto:bohdan@bosar.agency">Abdullah</a></p>
+      <p>Email: <a href="mailto:bohdan@bosar.agency">Hanaa</a></p>
+      <p>Location: Delta</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© All rights reserved. <strong>MindAid</strong></p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+

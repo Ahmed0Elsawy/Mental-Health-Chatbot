@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Questionnaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='first.css') }}">
+    <a href="/Home">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    </a>
+
+</head>
+<body>
+    <h1>Mental Health Questionnaire</h1>
+    <form method="POST" action="{{ url_for('questionnaire') }}">
+
+        <h2>1. How would you describe your current emotional state?</h2>
+        <label><input type="radio" name="emotional_state" value="Calm and Relaxed"> Calm and Relaxed</label><br>
+        <label><input type="radio" name="emotional_state" value="Stressed"> Stressed</label><br>
+        <label><input type="radio" name="emotional_state" value="Anxious"> Anxious</label><br>
+        <label><input type="radio" name="emotional_state" value="Overwhelmed"> Overwhelmed</label><br>
+        <label><input type="radio" name="emotional_state" value="Sad or Down"> Sad or Down</label><br>
+        <label><input type="radio" name="emotional_state" value="Lonely or Isolated"> Lonely or Isolated</label><br>
+        <label><input type="radio" name="emotional_state" value="Angry or Frustrated"> Angry or Frustrated</label><br>
+
+        <h2>2. What are your main concerns right now?</h2>
+        <label><input type="radio" name="main_concerns" value="Academic Pressure/Exams"> Academic Pressure/Exams</label><br>
+        <label><input type="radio" name="main_concerns" value="Social Anxiety"> Social Anxiety</label><br>
+        <label><input type="radio" name="main_concerns" value="Relationship Issues"> Relationship Issues</label><br>
+        <label><input type="radio" name="main_concerns" value="Financial Stress"> Financial Stress</label><br>
+        <label><input type="radio" name="main_concerns" value="Family-Related Issues"> Family-Related Issues</label><br>
+        <label><input type="radio" name="main_concerns" value="Health Concerns"> Health Concerns</label><br>
+        <label><input type="radio" name="main_concerns" value="Career or Future Uncertainty"> Career or Future Uncertainty</label><br>
+        <label><input type="radio" name="main_concerns" value="Personal Self-Esteem/Confidence"> Personal Self-Esteem/Confidence</label><br>
+
+        <h2>3. Which coping strategies are you currently using or prefer to use?</h2>
+        <label><input type="radio" name="coping_strategies" value="Talking to Friends or Family"> Talking to Friends or Family</label><br>
+        <label><input type="radio" name="coping_strategies" value="Seeking Professional Help (Counseling)"> Seeking Professional Help (Counseling)</label><br>
+        <label><input type="radio" name="coping_strategies" value="Practicing Mindfulness or Meditation"> Practicing Mindfulness or Meditation</label><br>
+        <label><input type="radio" name="coping_strategies" value="Engaging in Hobbies or Physical Activities"> Engaging in Hobbies or Physical Activities</label><br>
+        <label><input type="radio" name="coping_strategies" value="Journaling or Writing Thoughts"> Journaling or Writing Thoughts</label><br>
+        <label><input type="radio" name="coping_strategies" value="Taking Breaks or Resting"> Taking Breaks or Resting</label><br>
+
+        <h2>4. What type of support would you find most helpful right now?</h2>
+        <label><input type="radio" name="support_type" value="General Encouragement and Support"> General Encouragement and Support</label><br>
+        <label><input type="radio" name="support_type" value="Practical Advice and Tips"> Practical Advice and Tips</label><br>
+        <label><input type="radio" name="support_type" value="Just Listening (No Advice)"> Just Listening (No Advice)</label><br>
+        <label><input type="radio" name="support_type" value="Suggested Resources (Websites, Hotlines)"> Suggested Resources (Websites, Hotlines)</label><br>
+        <label><input type="radio" name="support_type" value="Connection to On-Campus Resources"> Connection to On-Campus Resources</label><br>
+
+        <h2>5. How distressed are you feeling on a scale of 1 to 5?</h2>
+        <label><input type="radio" name="distress_level" value="1"> 1 (Not Distressed)</label><br>
+        <label><input type="radio" name="distress_level" value="2"> 2 (A Little Distressed)</label><br>
+        <label><input type="radio" name="distress_level" value="3"> 3 (Moderately Distressed)</label><br>
+        <label><input type="radio" name="distress_level" value="4"> 4 (Very Distressed)</label><br>
+        <label><input type="radio" name="distress_level" value="5"> 5 (Extremely Distressed)</label><br>
+
+        <h2>6. Are you facing any academic-related challenges?</h2>
+        <label><input type="radio" name="academic_challenges" value="Difficulty Concentrating on Studies"> Difficulty Concentrating on Studies</label><br>
+        <label><input type="radio" name="academic_challenges" value="Procrastination Issues"> Procrastination Issues</label><br>
+        <label><input type="radio" name="academic_challenges" value="Lack of Motivation"> Lack of Motivation</label><br>
+        <label><input type="radio" name="academic_challenges" value="Struggling with Time Management"> Struggling with Time Management</label><br>
+        <label><input type="radio" name="academic_challenges" value="Fear of Failing Exams or Assignments"> Fear of Failing Exams or Assignments</label><br>
+        <label><input type="radio" name="academic_challenges" value="Balancing Academics and Social Life"> Balancing Academics and Social Life</label><br>
+        <label><input type="radio" name="academic_challenges" value="Adjusting to University Life or New Environment"> Adjusting to University Life or New Environment</label><br>
+
+        <h2>7. How would you describe your physical well-being?</h2>
+        <label><input type="radio" name="physical_wellbeing" value="Getting Adequate Sleep"> Getting Adequate Sleep</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="Experiencing Frequent Headaches or Physical Aches"> Experiencing Frequent Headaches or Physical Aches</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="Eating Regularly and Healthily"> Eating Regularly and Healthily</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="Engaging in Regular Physical Activity"> Engaging in Regular Physical Activity</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="Feeling Physically Tired or Fatigued"> Feeling Physically Tired or Fatigued</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="Recently Suffered from an Illness or Health Issue"> Recently Suffered from an Illness or Health Issue</label><br>
+
+        <h2>8. Do you feel you have a support network?</h2>
+        <label><input type="radio" name="support_network" value="Close Friends Available for Support"> Close Friends Available for Support</label><br>
+        <label><input type="radio" name="support_network" value="Family Support Available"> Family Support Available</label><br>
+        <label><input type="radio" name="support_network" value="Supportive Professors or Mentors"> Supportive Professors or Mentors</label><br>
+        <label><input type="radio" name="support_network" value="University Support Resources (e.g., counseling)"> University Support Resources (e.g., counseling)</label><br>
+        <label><input type="radio" name="support_network" value="Currently Lacking a Support Network"> Currently Lacking a Support Network</label><br>
+        <label><input type="radio" name="support_network" value="Prefer to Handle Issues Alone"> Prefer to Handle Issues Alone</label><br>
+
+        <h2>9. How would you describe your daily routine and lifestyle?</h2>
+        <label><input type="radio" name="daily_routine" value="Structured and Organized"> Structured and Organized</label><br>
+        <label><input type="radio" name="daily_routine" value="A Bit Chaotic"> A Bit Chaotic</label><br>
+        <label><input type="radio" name="daily_routine" value="Flexible and Unpredictable"> Flexible and Unpredictable</label><br>
+        <label><input type="radio" name="daily_routine" value="Mostly Relaxed with Few Responsibilities"> Mostly Relaxed with Few Responsibilities</label><br>
+        <label><input type="radio" name="daily_routine" value="Struggling to Find Balance Between Responsibilities and Free Time"> Struggling to Find Balance Between Responsibilities and Free Time</label><br>
+
+        <h2>10. Health-Related or Personal Challenges (Optional)</h2>
+        <p>Are there any challenges or conditions affecting your well-being that you’d like the chatbot to be aware of? (You can skip this if you prefer not to share.)</p>
+        <label><input type="radio" name="health_challenges" value="Addiction or Substance Use Concerns"> Addiction or Substance Use Concerns</label><br>
+        <label><input type="radio" name="health_challenges" value="Physical Disability"> Physical Disability</label><br>
+        <label><input type="radio" name="health_challenges" value="Mental Health Condition"> Mental Health Condition (e.g., anxiety, depression)</label><br>
+        <label><input type="radio" name="health_challenges" value="Learning Disability"> Learning Disability (e.g., ADHD, dyslexia)</label><br>
+        <label><input type="radio" name="health_challenges" value="None"> None</label><br>
+        <label><input type="radio" name="health_challenges" value="Prefer Not to Share"> Prefer Not to Share</label><br>
+        <h2>11. How do you generally handle setbacks or challenges?</h2>
+    <label><input type="radio" name="setback_handling" value="Bounce Back Quickly from Setbacks" required>Bounce Back Quickly from Setbacks</label><br>
+    <label><input type="radio" name="setback_handling" value="Take Time but Eventually Recover">Take Time but Eventually Recover</label><br>
+    <label><input type="radio" name="setback_handling" value="Tend to Dwell on Problems">Tend to Dwell on Problems</label><br>
+    <label><input type="radio" name="setback_handling" value="Frequently Feel Overwhelmed by Challenges">Frequently Feel Overwhelmed by Challenges</label><br>
+    <label><input type="radio" name="setback_handling" value="Often Need Help to Cope with Challenges">Often Need Help to Cope with Challenges</label><br>
+
+    <h2>12. How open are you to seeking help or support?</h2>
+    <label><input type="radio" name="help_seeking" value="Open to Talking About Issues with Others" required>to Talking About Issues with Others</label><br>
+    <label><input type="radio" name="help_seeking" value="Prefer Keeping Problems Private">Prefer Keeping Problems Private</label><br>
+    <label><input type="radio" name="help_seeking" value="Willing to Try New Coping Strategies">Willing to Try New Coping Strategies</label><br>
+    <label><input type="radio" name="help_seeking" value="Hesitant or Unsure About Getting Help">Hesitant or Unsure About Getting Help</label><br>
+    <label><input type="radio" name="help_seeking" value="Seeking Professional Help Already">Seeking Professional Help Already</label><br>
+    <label><input type="radio" name="help_seeking" value="Previously Had a Positive Experience with Counseling">Previously Had a Positive Experience with Counseling</label><br>
+
+    <h2>13. Health-Related or Personal Challenges (Optional)</h2>
+    <p>Are there any challenges or conditions affecting your well-being that you’d like the chatbot to be aware of? (You can skip this if you prefer not to share.)</p>
+    <label><input type="radio" name="health_challenges" value="Addiction or Substance Use Concerns">Addiction or Substance Use Concerns</label><br>
+    <label><input type="radio" name="health_challenges" value="Physical Disability">Physical Disability</label><br>
+    <label><input type="radio" name="health_challenges" value="Mental Health Condition">Mental Health Condition (e.g., anxiety, depression)</label><br>
+    <label><input type="radio" name="health_challenges" value="Learning Disability">Learning Disability (e.g., ADHD, dyslexia)</label><br>
+    <label><input type="radio" name="health_challenges" value="None">None</label><br>
+    <label><input type="radio" name="health_challenges" value="Prefer Not to Share">Prefer Not to Share</label><br>
+
+    <h2>14. Substance Use Concerns (Optional)</h2>
+    <p>Would you like to share any concerns related to substance use or dependency, if any?</p><label><input type="radio" name="substance_use" value="Yes, I have some concerns">Yes, I have some concerns</label><br>
+    <label><input type="radio" name="substance_use" value="No, I don’t have any concerns">No, I don’t have any concerns</label><br>
+    <label><input type="radio" name="substance_use" value="Prefer Not to Share">Prefer Not to Share</label><br>
+
+
+        <input type="hidden" name="id" value="{{ user_id }}">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

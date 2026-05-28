@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decrypted User Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark gray text */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50; /* Green color for the header */
+        }
+
+        table {
+            width: 100%; /* Full width for the table */
+            border-collapse: collapse; /* Collapse borders */
+            margin-top: 20px; /* Space above the table */
+        }
+
+        th, td {
+            padding: 10px; /* Padding inside table cells */
+            text-align: left; /* Left align text */
+            border: 1px solid #ccc; /* Light gray border */
+        }
+
+        th {
+            background: #4CAF50; /* Green background for header */
+            color: white; /* White text */
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2; /* Light gray for even rows */
+        }
+
+        tr:hover {
+            background: #ddd; /* Light gray on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Decrypted User Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>CGPA</th>
+                <th>College</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Emotional State</th>
+                <th>Main Concerns</th>
+                <th>Coping Strategies</th>
+                <th>Support Type</th>
+                <th>Distress Level</th>
+                <th>Academic Challenges</th>
+                <th>Physical Wellbeing</th>
+                <th>Support Network</th>
+                <th>Daily Routine</th>
+                <th>Setback Handling</th>
+                <th>Help Seeking</th>
+                <th>Health Challenges</th>
+                <th>Substance Use</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.cgpa }}</td>
+                <td>{{ user.college }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.gender }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.emotional_state }}</td>
+                <td>{{ user.main_concerns }}</td>
+                <td>{{ user.coping_strategies }}</td>
+                <td>{{ user.support_type }}</td>
+                <td>{{ user.distress_level }}</td>
+                <td>{{ user.academic_challenges }}</td>
+                <td>{{ user.physical_wellbeing }}</td>
+                <td>{{ user.support_network }}</td>
+                <td>{{ user.daily_routine }}</td>
+                <td>{{ user.setback_handling }}</td>
+                <td>{{ user.help_seeking }}</td>
+                <td>{{ user.health_challenges }}</td>
+                <td>{{ user.substance_use }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

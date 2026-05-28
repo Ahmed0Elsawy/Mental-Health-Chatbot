@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f5e6ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: right;
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px; /* Adjust as needed */
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #1f72aa;
+    margin-bottom: 2rem;
+    font-family: 'Merriweather', serif;
+}
+
+/* Form Styling */
+form {
+    /*background-color: #ffffff;*/
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2rem;
+}
+
+/* Section Heading */
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1.5rem;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Label and Radio Buttons */
+label {
+    display: block;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding-left: 20px;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #1f72aa;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #155724;
+}
+
+/* Flash message styling (if needed) */
+.flash {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Overall Form Layout */
+form input[type="radio"] {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+form p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}

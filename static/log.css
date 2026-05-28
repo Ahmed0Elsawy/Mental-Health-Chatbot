@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #c5b4f3, rgba(245, 230, 255, 0.99));
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.09);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styling */
+.container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Merriweather', serif;
+}
+
+/* Flash Message Styling */
+.flash {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Form Elements */
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #1f72aa;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    background-color: #1f72aa;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #155724;
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px; /* Adjust as needed */
+}
+
+
+.container p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.container p a {
+    color: #1f72aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+}
+ log.css
+
+
+
+/* Icon Styling */
+form .icon {
+    position: absolute;
+    top: 50%; /* Vertically centers the icon */
+    left: 10px; /* Adjusts horizontal positioning */
+    transform: translateY(-50%);
+    opacity: 0.1; /* Makes the icon subtly visible */
+    font-size: 4rem; /* Adjust size as needed */
+    color: #333; /* Adjust color for better visibility */
+    z-index: -1; /* Places the icon behind the input and label */
+}

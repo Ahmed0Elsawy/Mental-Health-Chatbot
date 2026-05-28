@@ -1,0 +1,17 @@
+# Secret key — NEVER upload this
+secret.key
+
+# Database — contains real user data
+mental_health.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db

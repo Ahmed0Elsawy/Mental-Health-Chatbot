@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان الصحة النفسية</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='first.css') }}">
+    <a href="/Arabic_Home">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    </a>
+</head>
+<body>
+    <h1>استبيان الصحة النفسية</h1>
+    <form method="POST" action="{{ url_for('Aquestionnaire') }}">
+
+        <h2>1. كيف تصف حالتك العاطفية الحالية؟</h2>
+        <label><input type="radio" name="emotional_state" value="هادئ ومسترخي"> هادئ ومسترخي</label><br>
+        <label><input type="radio" name="emotional_state" value="مضغوط"> مضغوط</label><br>
+        <label><input type="radio" name="emotional_state" value="قلق"> قلق</label><br>
+        <label><input type="radio" name="emotional_state" value="مغمور بالضغوط"> مغمور بالضغوط</label><br>
+        <label><input type="radio" name="emotional_state" value="حزين أو مكتئب"> حزين أو مكتئب</label><br>
+        <label><input type="radio" name="emotional_state" value="وحيد أو معزول"> وحيد أو معزول</label><br>
+        <label><input type="radio" name="emotional_state" value="غاضب أو محبط"> غاضب أو محبط</label><br>
+
+        <h2>2. ما هي مخاوفك الرئيسية حاليًا؟</h2>
+        <label><input type="radio" name="main_concerns" value="الضغوط الأكاديمية/الامتحانات"> الضغوط الأكاديمية/الامتحانات</label><br>
+        <label><input type="radio" name="main_concerns" value="القلق الاجتماعي"> القلق الاجتماعي</label><br>
+        <label><input type="radio" name="main_concerns" value="مشاكل العلاقات"> مشاكل العلاقات</label><br>
+        <label><input type="radio" name="main_concerns" value="الضغوط المالية"> الضغوط المالية</label><br>
+        <label><input type="radio" name="main_concerns" value="مشاكل عائلية"> مشاكل عائلية</label><br>
+        <label><input type="radio" name="main_concerns" value="مشاكل صحية"> مشاكل صحية</label><br>
+        <label><input type="radio" name="main_concerns" value="عدم اليقين بشأن المستقبل"> عدم اليقين بشأن المستقبل</label><br>
+        <label><input type="radio" name="main_concerns" value="التقدير الذاتي/الثقة بالنفس"> التقدير الذاتي/الثقة بالنفس</label><br>
+
+        <h2>3. ما هي استراتيجيات التأقلم التي تستخدمها حاليًا أو تفضل استخدامها؟</h2>
+        <label><input type="radio" name="coping_strategies" value="التحدث مع الأصدقاء أو العائلة"> التحدث مع الأصدقاء أو العائلة</label><br>
+        <label><input type="radio" name="coping_strategies" value="الحصول على مساعدة مهنية (استشارة)"> الحصول على مساعدة مهنية (استشارة)</label><br>
+        <label><input type="radio" name="coping_strategies" value="ممارسة التأمل أو اليقظة"> ممارسة التأمل أو اليقظة</label><br>
+        <label><input type="radio" name="coping_strategies" value="ممارسة الهوايات أو الأنشطة البدنية"> ممارسة الهوايات أو الأنشطة البدنية</label><br>
+        <label><input type="radio" name="coping_strategies" value="الكتابة أو تدوين الأفكار"> الكتابة أو تدوين الأفكار</label><br>
+        <label><input type="radio" name="coping_strategies" value="أخذ فترات راحة أو استراحة"> أخذ فترات راحة أو استراحة</label><br>
+
+        <h2>4. ما نوع الدعم الذي تعتقد أنه سيكون الأكثر فائدة الآن؟</h2>
+        <label><input type="radio" name="support_type" value="التشجيع والدعم العام"> التشجيع والدعم العام</label><br>
+        <label><input type="radio" name="support_type" value="النصائح والمشورة العملية"> النصائح والمشورة العملية</label><br>
+        <label><input type="radio" name="support_type" value="الاستماع فقط (بدون نصيحة)"> الاستماع فقط (بدون نصيحة)</label><br>
+        <label><input type="radio" name="support_type" value="اقتراحات للموارد (مواقع، خطوط مساعدة)"> اقتراحات للموارد (مواقع، خطوط مساعدة)</label><br>
+        <label><input type="radio" name="support_type" value="الاتصال بموارد الدعم في الحرم الجامعي"> الاتصال بموارد الدعم في الحرم الجامعي</label><br>
+
+        <h2>5. ما مدى شعورك بالضيق على مقياس من 1 إلى 5؟</h2>
+        <label><input type="radio" name="distress_level" value="1"> 1 (غير مضغوط)</label><br>
+        <label><input type="radio" name="distress_level" value="2"> 2 (قليل من الضيق)</label><br>
+        <label><input type="radio" name="distress_level" value="3"> 3 (مضطرب بشكل معتدل)</label><br>
+        <label><input type="radio" name="distress_level" value="4"> 4 (مضطرب جدًا)</label><br>
+        <label><input type="radio" name="distress_level" value="5"> 5 (مضطرب للغاية)</label><br>
+
+        <h2>6. هل تواجه أي تحديات أكاديمية؟</h2>
+        <label><input type="radio" name="academic_challenges" value="صعوبة التركيز في الدراسة"> صعوبة التركيز في الدراسة</label><br>
+        <label><input type="radio" name="academic_challenges" value="مشكلة التسويف"> مشكلة التسويف</label><br>
+        <label><input type="radio" name="academic_challenges" value="نقص الحافز"> نقص الحافز</label><br>
+        <label><input type="radio" name="academic_challenges" value="صعوبة إدارة الوقت"> صعوبة إدارة الوقت</label><br>
+        <label><input type="radio" name="academic_challenges" value="الخوف من الفشل في الامتحانات أو المهام"> الخوف من الفشل في الامتحانات أو المهام</label><br>
+        <label><input type="radio" name="academic_challenges" value="موازنة الأكاديميات والحياة الاجتماعية"> موازنة الأكاديميات والحياة الاجتماعية</label><br>
+        <label><input type="radio" name="academic_challenges" value="التأقلم مع الحياة الجامعية أو البيئة الجديدة"> التأقلم مع الحياة الجامعية أو البيئة الجديدة</label><br>
+
+        <h2>7. كيف تصف حالتك الجسدية؟</h2>
+        <label><input type="radio" name="physical_wellbeing" value="الحصول على قسط كافٍ من النوم"> الحصول على قسط كافٍ من النوم</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="تعاني من صداع متكرر أو آلام جسدية"> تعاني من صداع متكرر أو آلام جسدية</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="تناول الطعام بانتظام وبصحة"> تناول الطعام بانتظام وبصحة</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="ممارسة النشاط البدني بانتظام"> ممارسة النشاط البدني بانتظام</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="الشعور بالتعب أو الإرهاق الجسدي"> الشعور بالتعب أو الإرهاق الجسدي</label><br>
+        <label><input type="radio" name="physical_wellbeing" value="أصبت مؤخرًا بمرض أو مشكلة صحية"> أصبت مؤخرًا بمرض أو مشكلة صحية</label><br>
+
+        <h2>8. هل تشعر بأن لديك شبكة دعم؟</h2>
+        <label><input type="radio" name="support_network" value="أصدقاء مقربون للحصول على الدعم"> أصدقاء مقربون للحصول على الدعم</label><br>
+        <label><input type="radio" name="support_network" value="دعم عائلي متاح"> دعم عائلي متاح</label><br>
+        <label><input type="radio" name="support_network" value="أساتذة أو مرشدون في الجامعة"> أساتذة أو مرشدون في الجامعة</label><br>
+        <label><input type="radio" name="support_network" value="لا أملك دعم كافٍ أو لا أشعر بالدعم"> لا أملك دعم كافٍ أو لا أشعر بالدعم</label><br>
+
+        <h2>9. كيف تصف روتينك اليومي وأسلوب حياتك؟</h2>
+        <label><input type="radio" name="daily_routine" value="منظم ومنضبط"> منظم ومنضبط</label><br>
+        <label><input type="radio" name="daily_routine" value="فوضوي بعض الشيء"> فوضوي بعض الشيء</label><br>
+        <label><input type="radio" name="daily_routine" value="مرن وغير متوقع"> مرن وغير متوقع</label><br>
+        <label><input type="radio" name="daily_routine" value="مسترخي بشكل عام مع مسؤوليات قليلة"> مسترخي بشكل عام مع مسؤوليات قليلة</label><br>
+        <label><input type="radio" name="daily_routine" value="أجد صعوبة في إيجاد توازن بين المسؤوليات والوقت الحر"> أجد صعوبة في إيجاد توازن بين المسؤوليات والوقت الحر</label><br>
+
+        <h2>10. التحديات الصحية أو الشخصية (اختياري)</h2>
+        <p>هل هناك أي تحديات أو ظروف تؤثر على رفاهيتك ترغب في أن يعرفها الروبوت؟ (يمكنك تخطي هذا إذا كنت تفضل عدم المشاركة)</p>
+        <label><input type="radio" name="health_challenges" value="مشاكل إدمان أو تعاطي مواد"> مشاكل إدمان أو تعاطي مواد</label><br>
+        <label><input type="radio" name="health_challenges" value="إعاقة جسدية"> إعاقة جسدية</label><br>
+        <label><input type="radio" name="health_challenges" value="حالة صحية نفسية"> حالة صحية نفسية (مثل القلق أو الاكتئاب)</label><br>
+        <label><input type="radio" name="health_challenges" value="إعاقة تعليمية"> إعاقة تعليمية (مثل ADHD أو الديسلكسيا)</label><br>
+        <label><input type="radio" name="health_challenges" value="لا يوجد"> لا يوجد</label><br>
+        <label><input type="radio" name="health_challenges" value="أفضل عدم المشاركة"> أفضل عدم المشاركة</label><br>
+
+        <h2>11. كيف تتعامل عادةً مع الصعوبات أو التحديات؟</h2>
+        <label><input type="radio" name="setback_handling" value="أتعافى بسرعة من الانتكاسات" required> أتعافى بسرعة من الانتكاسات</label><br>
+        <label><input type="radio" name="setback_handling" value="أحتاج لبعض الوقت ولكني أتعافى في النهاية"> أحتاج لبعض الوقت ولكني أتعافى في النهاية</label><br>
+        <label><input type="radio" name="setback_handling" value="أميل للتفكير في المشاكل"> أميل للتفكير في المشاكل</label><br>
+        <label><input type="radio" name="setback_handling" value="أشعر بالإرهاق غالباً عند مواجهة التحديات"> أشعر بالإرهاق غالباً عند مواجهة التحديات</label><br>
+        <label><input type="radio" name="setback_handling" value="غالباً ما أحتاج لمساعدة للتعامل مع التحديات"> غالباً ما أحتاج لمساعدة للتعامل مع التحديات</label><br>
+
+        <h2>12. ما مدى استعدادك لطلب المساعدة أو الدعم؟</h2>
+        <label><input type="radio" name="help_seeking" value="منفتح للتحدث عن المشاكل مع الآخرين" required> منفتح للتحدث عن المشاكل مع الآخرين</label><br>
+        <label><input type="radio" name="help_seeking" value="أفضل الاحتفاظ بالمشاكل لنفسي"> أفضل الاحتفاظ بالمشاكل لنفسي</label><br>
+        <label><input type="radio" name="help_seeking" value="مستعد لتجربة استراتيجيات جديدة للتعامل"> مستعد لتجربة استراتيجيات جديدة للتعامل</label><br>
+        <label><input type="radio" name="help_seeking" value="متردد أو غير متأكد من طلب المساعدة"> متردد أو غير متأكد من طلب المساعدة</label><br>
+        <label><input type="radio" name="help_seeking" value="أتلقى مساعدة مهنية بالفعل"> أتلقى مساعدة مهنية بالفعل</label><br>
+        <label><input type="radio" name="help_seeking" value="لدي تجربة إيجابية سابقة مع الاستشارة"> لدي تجربة إيجابية سابقة مع الاستشارة</label><br>
+
+        <h2>١٣. التحديات الصحية أو الشخصية (اختياري)</h2>
+        <p>هل توجد تحديات أو ظروف تؤثر على صحتك النفسية أو البدنية ترغب في أن يكون البوت على علم بها؟ (يمكنك تجاوز هذا السؤال إذا كنت لا تفضل المشاركة).</p>
+        <label><input type="radio" name="health_challenges" value="قضايا تتعلق بالإدمان أو تعاطي المواد"> قضايا تتعلق بالإدمان أو تعاطي المواد</label><br>
+        <label><input type="radio" name="health_challenges" value="إعاقة جسدية">إعاقة جسدية</label><br>
+        <label><input type="radio" name="health_challenges" value="حالة صحية نفسية (مثل القلق، الاكتئاب)">حالة صحية نفسية (مثل القلق، الاكتئاب)</label><br>
+        <label><input type="radio" name="health_challenges" value="صعوبة تعلم (مثل ADHD، عسر القراءة">صعوبة تعلم (مثل ADHD، عسر القراءة)</label><br>
+        <label><input type="radio" name="health_challenges" value="لا شيء">لا شيء</label><br>
+        <label><input type="radio" name="health_challenges" value="أفضل عدم المشاركة">أفضل عدم المشاركة</label><br>
+
+        <h2>١٤. مخاوف تتعلق باستخدام المواد (اختياري)</h2>
+        <p>هل ترغب في مشاركة أي مخاوف تتعلق باستخدام أو إدمان المواد، إن وجدت؟</p>
+        <label><input type="radio" name="substance_use" value="نعم، لدي بعض المخاوف">نعم، لدي بعض المخاوف</label><br>
+        <label><input type="radio" name="substance_use" value="لا، ليس لدي أي مخاو">لا، ليس لدي أي مخاوف</label><br>
+        <label><input type="radio" name="substance_use" value="أفضل عدم المشاركة">أفضل عدم المشاركة</label><br>
+
+
+        <input type="hidden" name="id" value="{{ user_id }}">
+
+        <button type="submit">إرسال</button>
+    </form>
+</body>
+</html>
+

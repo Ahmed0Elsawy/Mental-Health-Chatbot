@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة التسجيل</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+    <a href="/Arabic_Home">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    </a>
+</head>
+<body>
+    <div class="container">
+        <h2>التسجيل</h2>
+
+        <!-- عرض رسائل الفلاش للتغذية الراجعة -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('Asignup') }}" method="POST">
+            <label for="id">رقم الهوية:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="cgpa">المعدل التراكمي:</label>
+            <input type="number" id="cgpa" name="cgpa" step="0.01" required>
+
+            <label for="college">الكلية:</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="gender">النوع:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">ذكر</option>
+                <option value="female">أنثى</option>
+            </select>
+
+            <label for="phone">الهاتف:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="username">اسم المستخدم:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">إنشاء حساب</button>
+        </form>
+    </div>
+</body>
+</html>

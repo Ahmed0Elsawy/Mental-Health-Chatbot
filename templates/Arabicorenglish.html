@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+    /* Basic styling for the layout */
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Adjust as needed */
+    margin: 0; /* Remove margins to prevent additional space */
+    background-image: url('../static/image.png');
+    background-size: contain; /* Ensures the image covers the whole container */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background stay fixed during scrolling (optional) */
+    color: #333; /* Ensures text remains visible */
+    }
+
+    .container {
+        text-align: center;
+        max-width: 600px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.45); /* Slightly transparent background for contrast */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    /* Existing styles */
+    h1 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .button-container {
+        margin-top: 1.5em;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button.arabic {
+        background-color: rgba(76, 175, 80, 0.85);
+        color: #ffffff;
+    }
+
+    .button.english {
+        background-color: rgba(0, 123, 255, 0.8);
+        color: #ffffff;
+    }
+
+    .button:hover {
+        opacity: 0.9;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Chatbot | روبوت الدردشة للصحة النفسية</h1>
+        <p>Please select your preferred language / الرجاء اختيار لغتك المفضلة</p>
+
+        <div class="button-container">
+            <button class="button arabic" onclick="location.href='Arabic_Home'">العربية</button>
+            <button class="button english" onclick="location.href='Home'">English</button>
+        </div>
+    </div>
+</body>
+</html>
